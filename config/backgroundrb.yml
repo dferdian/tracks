@@ -1,0 +1,23 @@
+#:backgroundrb:
+#  :ip: 0.0.0.0
+#
+#:backgroundrb:
+#  :port: 11006 # port to start listen
+#  :ip: localhost # host to listen
+#  :environment: production # rails environment to load
+#  :log: foreground # foreground mode,print log messages on console
+#  :debug_log: false # disable log workers and other logging
+#  :persistent_disabled: false # turn this off if your application doesn't use backgroundrb's persistent/enqueued tasks system
+#  :persistent_delay: 10 # the time (seconds) between each time backgroundrb checks the database for enqueued tasks
+
+:backgroundrb:
+  :port: 11111     # use port 11111
+  :log: background # foreground mode,print log messages on console
+  :debug_log: true # disable log workers and other logging
+  :environment: development
+
+:backgroundrb:
+  :port: 22222      # use port 22222
+  :log: background # foreground mode,print log messages on console
+  :debug_log: true # disable log workers and other logging
+  :environment: production
