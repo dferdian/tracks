@@ -89,12 +89,14 @@ class User < ActiveRecord::Base
            end
   has_many :notes, :order => "created_at DESC", :dependent => :delete_all
   has_one :preference, :dependent => :destroy
+  has_one :smtp_setting, :dependent => :destroy
   has_many :taggings
   has_many :tags, :through => :taggings, :select => "DISTINCT tags.*"
   
   attr_protected :is_admin
 
   validates_presence_of :login
+  validates_uniqueness_of :email, :on => :update
   validates_presence_of :password, :if => :password_required?
   validates_length_of :password, :within => 5..40, :if => :password_required?
   validates_presence_of :password_confirmation, :if => :password_required?

@@ -1,36 +1,55 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-admin_user_prefs:
-  id: 1
-  user_id: 1
-  staleness_starts: 7
-  date_format: "%d/%m/%Y"
+--- 
+preferences_002: 
+  staleness_starts: "7"
+  title_date_format: "%A,  %B %d, %Y"
+  show_number_completed: "5"
+  date_format: "%m/%d/%Y"
+  show_hidden_projects_in_sidebar: "0"
+  verbose_action_descriptors: "1"
+  show_hidden_contexts_in_sidebar: "0"
+  mobile_todos_per_page: "6"
+  refresh: "0"
+  admin_email: ""
+  id: "2"
+  week_starts: "0"
+  show_project_on_todo_done: "0"
+  time_zone: Mountain Time (US & Canada)
+  user_id: "2"
+  due_style: "0"
+  show_completed_projects_in_sidebar: "0"
+preferences_003: 
+  staleness_starts: "7"
   title_date_format: "%A, %d %B %Y"
-  show_number_completed: 5
-  show_completed_projects_in_sidebar: true
-  show_hidden_contexts_in_sidebar: true
-  show_hidden_projects_in_sidebar: true
-  admin_email: butshesagirl@rousette.org.uk
-  week_starts: 1
-  due_style: 0
-  refresh: 0
-  time_zone: "London"
-  verbose_action_descriptors: true
-  show_project_on_todo_done: false
-
-other_user_prefs:
-  id: 2
-  user_id: 2
-  staleness_starts: 7
-  date_format: "%d/%m/%Y"
+  show_number_completed: "0"
+  date_format: "%Y/%m/%d"
+  show_hidden_projects_in_sidebar: "1"
+  verbose_action_descriptors: "0"
+  show_hidden_contexts_in_sidebar: "1"
+  mobile_todos_per_page: "6"
+  refresh: "0"
+  admin_email: ""
+  id: "3"
+  week_starts: "1"
+  show_project_on_todo_done: "0"
+  time_zone: London
+  user_id: "3"
+  due_style: "1"
+  show_completed_projects_in_sidebar: "1"
+preferences_001: 
+  staleness_starts: "7"
   title_date_format: "%A, %d %B %Y"
-  show_number_completed: 5
-  show_completed_projects_in_sidebar: true
-  show_hidden_contexts_in_sidebar: true
-  show_hidden_projects_in_sidebar: true
+  show_number_completed: "5"
+  date_format: "%d/%m/%Y"
+  show_hidden_projects_in_sidebar: "1"
+  verbose_action_descriptors: "0"
+  show_hidden_contexts_in_sidebar: "1"
+  mobile_todos_per_page: "6"
+  refresh: "0"
   admin_email: butshesagirl@rousette.org.uk
-  week_starts: 1
-  due_style: 0
-  refresh: 0
-  time_zone: "London"
-  verbose_action_descriptors: false
-  show_project_on_todo_done: true
+  id: "1"
+  week_starts: "1"
+  show_project_on_todo_done: "0"
+  time_zone: London
+  user_id: "1"
+  due_style: "1"
+  show_completed_projects_in_sidebar: "1"

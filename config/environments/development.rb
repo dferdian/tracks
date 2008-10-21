@@ -15,3 +15,7 @@ config.action_mailer.raise_delivery_errors = false
 
 # Unique cookies
 ActionController::CgiRequest::DEFAULT_SESSION_OPTIONS[:session_key] = "TrackDev"
+
+config.after_initialize do
+  ActiveMerchant::Billing::Base.mode = :test
+end

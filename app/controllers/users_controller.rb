@@ -35,20 +35,27 @@ class UsersController < ApplicationController
 
   # GET /users/new
   def new
-    if User.no_users_yet?
-      @page_title = "TRACKS::Sign up as the admin user"
-      @heading = "Welcome to TRACKS. To get started, please create an admin account:"
-      @user = get_new_user
-    elsif @user && @user.is_admin?
-      @page_title = "TRACKS::Sign up a new user"
-      @heading = "Sign up a new user:"
-      @user = get_new_user
-    else # all other situations (i.e. a non-admin is logged in, or no one is logged in, but we have some users)
-      @page_title = "TRACKS::No signups"
-      @admin_email = User.find_admin.preference.admin_email
-      render :action => "nosignup", :layout => "login"
-      return
-    end
+    ## Default signup code
+    
+#    if User.no_users_yet?
+#      @page_title = "TRACKS::Sign up as the admin user"
+#      @heading = "Welcome to TRACKS. To get started, please create an admin account:"
+#      @user = get_new_user
+#    elsif @user && @user.is_admin?
+#      @page_title = "TRACKS::Sign up a new user"
+#      @heading = "Sign up a new user:"
+#      @user = get_new_user
+#    else # all other situations (i.e. a non-admin is logged in, or no one is logged in, but we have some users)
+#      @page_title = "TRACKS::No signups"
+#      @admin_email = User.find_admin.preference.admin_email
+#      render :action => "nosignup", :layout => "login"
+#      return
+#    end
+
+    @page_title = "TRACKS::Sign up a new user"
+    @heading = "Sign up a new user:"
+    @user = get_new_user
+      
     render :layout => "login"
   end
   
@@ -66,13 +73,13 @@ class UsersController < ApplicationController
     end
     respond_to do |format|
       format.html do
-        unless User.no_users_yet? || (@user && @user.is_admin?)
-          @page_title = "No signups"
-          @admin_email = User.find_admin.preference.admin_email
-          render :action => "nosignup", :layout => "login"
-          return
-        end
-        
+#        unless User.no_users_yet? || (@user && @user.is_admin?)
+#          @page_title = "No signups"
+#          @admin_email = User.find_admin.preference.admin_email
+#          render :action => "nosignup", :layout => "login"
+#          return
+#        end
+#        
         user = User.new(params['user'])
         unless user.valid?
           session['new_user'] = user
@@ -93,14 +100,16 @@ class UsersController < ApplicationController
         return
       end
       format.xml do
-        unless User.find_by_id_and_is_admin(session['user_id'], true)
-          render :text => "401 Unauthorized: Only admin users are allowed access to this function.", :status => 401
-          return
-        end
-        unless check_create_user_params
-          render_failure "Expected post format is valid xml like so: <request><login>username</login><password>abc123</password></request>."
-          return
-        end
+       
+#        unless User.find_by_id_and_is_admin(session['user_id'], true)
+#          render :text => "401 Unauthorized: Only admin users are allowed access to this function.", :status => 401
+#          return
+#        end
+#        unless check_create_user_params
+#          render_failure "Expected post format is valid xml like so: <request><login>username</login><password>abc123</password></request>."
+#          return
+#        end
+
         user = User.new(params[:request])
         user.password_confirmation = params[:request][:password]
         if user.save

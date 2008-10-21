@@ -1,4 +1,6 @@
 class TodosController < ApplicationController
+  require 'aws/s3'
+  include AWS::S3
 
   helper :todos
 
@@ -63,40 +65,41 @@ class TodosController < ApplicationController
       @not_done_todos = [@todo] if @new_context_created
       @todo.context_id = context.id
     end
-
+    @todo = save_attachment(@todo)
     @saved = @todo.save
+    
     unless (@saved == false) || p.tag_list.blank?
       @todo.tag_with(p.tag_list, current_user)
       @todo.tags.reload
     end
-    
-    respond_to do |format|
-      format.html { redirect_to :action => "index" }
-      format.m do
-        @return_path=cookies[:mobile_url]
-        # todo: use function for this fixed path
-        @return_path='/mobile' if @return_path.nil?
-        if @saved
-          redirect_to @return_path
-        else
-          @projects = current_user.projects.find(:all)
-          @contexts = current_user.contexts.find(:all)
-          render :action => "new"
+    responds_to_parent do
+      respond_to do |format|
+        format.html { redirect_to :action => "index" }
+        format.m do
+          @return_path=cookies[:mobile_url]
+          # todo: use function for this fixed path
+          @return_path='/mobile' if @return_path.nil?
+          if @saved
+            redirect_to @return_path
+          else
+            @projects = current_user.projects.find(:all)
+            @contexts = current_user.contexts.find(:all)
+            render :action => "new"
+          end
         end
-      end
-      format.js do
-        determine_down_count if @saved
-        @contexts = current_user.contexts.find(:all) if @new_context_created
-        @projects = current_user.projects.find(:all) if @new_project_created
-        @initial_context_name = params['default_context_name']
-        @initial_project_name = params['default_project_name']
-        render :action => 'create'
-      end
-      format.xml do
-        if @saved
-          head :created, :location => todo_url(@todo)
-        else
-          render :xml => @todo.errors.to_xml, :status => 422
+        format.js do
+          determine_down_count if @saved
+          @contexts = current_user.contexts.find(:all) if @new_context_created
+          @projects = current_user.projects.find(:all) if @new_project_created
+          @initial_context_name = params['default_context_name']
+          render :action => 'create'
+        end
+        format.xml do
+          if @saved
+            head :created, :location => todo_url(@todo)
+          else
+            render :xml => @todo.errors.to_xml, :status => 422
+          end
         end
       end
     end
@@ -106,9 +109,11 @@ class TodosController < ApplicationController
     @projects = current_user.projects.find(:all)
     @contexts = current_user.contexts.find(:all)
     @source_view = params['_source_view'] || 'todo'
+    
     respond_to do |format|
       format.js
     end
+
   end
   
   def show
@@ -216,66 +221,93 @@ class TodosController < ApplicationController
     if !(params['done'] == '1') && @todo.completed?
       @todo.activate!
     end
-    
+    # Note : remove attachment not respond in develop form	
+    #    unless params[:count_asset] == "0"
+    #	  id_form = params[:id_form]
+    #      for i in 0..params[:count_asset].to_i-1
+    #        if params[id_form][:status]["#{i}"] == "0"
+    #          asset = Asset.find(params[id_form][:id]["#{i}"])
+    #          asset.destroy
+    #        else
+    #          asset = Asset.find(params[id_form][:id]["#{i}"])
+    #          params[:edit_asset][:uploaded_data]= params[id_form][:file]["#{i}"]
+    #          asset.update_attributes(params[:edit_asset]) unless params[id_form][:file]["#{i}"]==""
+    #        end
+    #      end 
+    #    end
+
+    @todo = save_attachment(@todo)
+		
     @saved = @todo.update_attributes params["todo"]
     @context_changed = @original_item_context_id != @todo.context_id
     @todo_was_activated_from_deferred_state = @original_item_was_deferred && @todo.active?
     determine_remaining_in_context_count(@original_item_context_id) if @context_changed
     @project_changed = @original_item_project_id != @todo.project_id
     if (@project_changed && !@original_item_project_id.nil?) then @remaining_undone_in_project = current_user.projects.find(@original_item_project_id).not_done_todo_count; end
-    determine_down_count
-    respond_to do |format|
-      format.js
-      format.xml { render :xml => @todo.to_xml( :except => :user_id ) }
-      format.m do
-        if @saved
-          if cookies[:mobile_url]
-            cookies[:mobile_url] = {:value => nil, :secure => TRACKS_COOKIES_SECURE}
-            redirect_to cookies[:mobile_url]
-          else
-            redirect_to formatted_todos_path(:m)
-          end
-        else
-          render :action => "edit", :format => :m
-        end
+    determine_down_count 
+    #    respond_do do |format|
+    responds_to_parent do
+      render :update do |page|
+        page.redirect_to :controller => "todos" 
+        flash[:notice] = 'Message was successfully Update.'
       end
+      #    end
     end
   end
-    
+  # Note : redirect not respond to index or home
+  #    respond_to do |format|
+  #      responds_to_parent do
+  #        format.js
+  #      end
+  #      format.xml { render :xml => @todo.to_xml( :except => :user_id ) }
+  #      format.m do
+  #        if @saved
+  #          if cookies[:mobile_url]
+  #            cookies[:mobile_url] = nil
+  #            redirect_to cookies[:mobile_url]
+  #          else
+  #            redirect_to formatted_todos_path(:m)
+  #          end
+  #        else
+  #          prender :action => "edit", :format => :m
+  #        end
+  #      end
+  #    end
+  #  end
+  #    
   def destroy
     @todo = get_todo_from_params
-    @context_id = @todo.context_id
+	@context_id = @todo.context_id
     @project_id = @todo.project_id
 
     # check if this todo has a related recurring_todo. If so, create next todo
     check_for_next_todo
-    
     @saved = @todo.destroy
-    
     respond_to do |format|
       
-      format.html do
+      format.html do	  
         if @saved
-          notify :notice, "Successfully deleted next action", 2.0
-          redirect_to :action => 'index'
+          
+		  flash[:notice] = 'Successfully deleted next action.'
+		  #notify :notice, "Successfully deleted next action", 2.0
+          redirect_to :action => 'index'		  
         else
-          notify :error, "Failed to delete the action", 2.0
+          
+		  flash[:notice] = 'Failed to delete the action.'
+		  #notify :error, "Failed to delete the action", 2.0
           redirect_to :action => 'index'
         end
       end  
       
       format.js do
         if @saved
-          determine_down_count
           if source_view_is_one_of(:todo, :deferred)
             determine_remaining_in_context_count(@context_id)
           end
         end
         render
       end
-      
       format.xml { render :text => '200 OK. Action deleted.', :status => 200 }
-    
     end
   end
 
@@ -371,9 +403,58 @@ class TodosController < ApplicationController
         @default_project_context_name_map = build_default_project_context_name_map(@projects).to_json
       }
       format.m { 
-        cookies[:mobile_url]= {:value => request.request_uri, :secure => TRACKS_COOKIES_SECURE}
+        cookies[:mobile_url]=request.request_uri
         render :action => "mobile_tag"         
       }
+    end
+  end
+  
+  def download
+    todo = Todo.find(params[:todo_id] || nil) 
+	existfile = false
+	if todo.assets
+    asset = todo.assets.find(params[:id])
+    existfile =  FileTest.exist?("#{asset.public_filename}") 
+    end
+    if todo && existfile  
+      asset = todo.assets.find(params[:id])
+      send_file("#{asset.public_filename}", :type => asset.content_type, :filename => asset.filename)
+	  else
+      redirect_to :action => 'index'
+    end
+  end
+  
+  def download_from_s3
+      bucket = Bucket.find(AMAZON_BUCKET)
+      asset = Asset.find(params[:id])
+      bucket.objects.each do |object|
+        if object.key.split("/").include?(asset.filename)
+          redirect_to asset.public_filename
+          return
+        end
+      end
+      render :text => "#{asset.filename} can not find in local or s3.amazonaws so you can't download this file."
+  end
+  
+  def file
+    bucket = Bucket.find(AMAZON_BUCKET)
+    asset = Asset.find(params[:id])
+    bucket.objects.each do |object|
+      if object.key.split("/").include?(asset.filename)
+        redirect_to asset.public_filename
+        return
+      end
+    end
+    render :text => "#{asset.filename} can not find in local or s3.amazonaws so you can't download this file."
+  end
+  
+  def remove_attachment
+    asset = Asset.find(params[:id])
+    asset.destroy
+    todo = Todo.find(params[:todo_id])
+    render :update do |page|
+      page.replace "asset_#{params[:id]}", ""
+      page.replace_html "notes_todo_#{params[:todo_id]}", :partial => "toggle_notes", :locals => {:item => todo}
     end
   end
   
@@ -609,7 +690,7 @@ class TodosController < ApplicationController
     lambda do
       @page_title = "All actions"
       @home = true
-      cookies[:mobile_url]= { :value => request.request_uri, :secure => TRACKS_COOKIES_SECURE}
+      cookies[:mobile_url]=request.request_uri
       determine_down_count
     
       render :action => 'index'
@@ -688,7 +769,30 @@ class TodosController < ApplicationController
       end
     end 
   end
-
+  
+  def save_attachment(todo)
+    params[:upload_file].each do |file|
+      files = Hash["asset" => {"uploaded_data"=>""}]
+      files["asset"]["uploaded_data"] = file[1]
+      if files["asset"]["uploaded_data"] != ""
+        asset = Asset.new(files["asset"])
+        todo.assets << asset
+      end
+    end
+    todo
+  end
+  
+  def update_attachment(todo, id)
+    params[:upload_file].each do |file|
+      files = Hash["attachment_#{id}" => {"uploaded_data"=>""}]
+      files["attachment_${id}"]["uploaded_data"] = file[1]
+      if files["attachment_${id}"]["uploaded_data"] != ""
+        asset = Asset.new(files["attachment_#{id}"])
+        todo.assets << asset
+      end
+    end
+    todo
+  end
   class FindConditionBuilder
 
     def initialize
@@ -756,6 +860,6 @@ class TodosController < ApplicationController
       return false if context_name.blank?
       true
     end
-          
   end
 end
+

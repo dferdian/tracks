@@ -34,13 +34,23 @@ class RecurringTodoTest < Test::Rails::TestCase
   def test_daily_every_day
     # every_day should return todays date if there was no previous date
     due_date = @every_day.get_due_date(nil)
-    # use strftime in compare, because milisec / secs could be different
-    assert_equal @today.strftime("%d-%m-%y"), due_date.strftime("%d-%m-%y")
+    # use to_s in compare, because milisec could be different
+    assert_equal @today.to_s, due_date.to_s
 
     # when the last todo was completed today, the next todo is due tomorrow
     due_date =@every_day.get_due_date(@today)
     assert_equal @tomorrow, due_date
-        
+    
+    # every_day should return start_day if it is in the future
+    @every_day.start_from = @in_three_days
+    due_date = @every_day.get_due_date(nil)
+    assert_equal @in_three_days, due_date
+    
+    # if we give a date in the future for the previous todo, the next to do
+    # should be based on that future date.
+    due_date = @every_day.get_due_date(@in_four_days)
+    assert_equal @in_four_days+1.day, due_date    
+    
     # do something every 14 days
     @every_day.every_other1=14
     due_date = @every_day.get_due_date(@today)
@@ -158,19 +168,18 @@ class RecurringTodoTest < Test::Rails::TestCase
     
     due_date = @monthly.get_due_date(@sunday) # june 8th
     assert_equal Time.utc(2008,8,8), due_date # aug 8th    
+  
   end
   
   def test_yearly_pattern
     # beginning of same year
     due_date = @yearly.get_due_date(Time.utc(2008,2,10)) # feb 10th
-    assert_equal @sunday, due_date # june 8th   
-    
+    assert_equal @sunday, due_date # june 8th    
     # same month, previous date
     due_date = @yearly.get_due_date(@saturday) # june 7th
     show_from_date = @yearly.get_show_from_date(@saturday) # june 7th
     assert_equal @sunday, due_date # june 8th
     assert_equal @sunday-5.days, show_from_date
-
     # same month, day after
     due_date = @yearly.get_due_date(@monday) # june 9th
     assert_equal Time.utc(2009,6,8), due_date # june 8th next year
@@ -188,47 +197,17 @@ class RecurringTodoTest < Test::Rails::TestCase
     due_date = @yearly.get_due_date(Time.utc(2008,6,12)) # june 7th
     assert_equal Time.utc(2009,6,10), due_date # june 10th    
     
-    # test handling of nil
+    # test handling of nil 
     due_date1 = @yearly.get_due_date(nil) 
     due_date2 = @yearly.get_due_date(Time.now.utc + 1.day)
     assert_equal due_date1, due_date2
-  end
-
-  def test_start_from_in_future
-    # every_day should return start_day if it is in the future
-    @every_day.start_from = @in_three_days
-    due_date = @every_day.get_due_date(nil)
-    assert_equal @in_three_days, due_date
-    due_date = @every_day.get_due_date(@tomorrow)
-    assert_equal @in_three_days, due_date
-    
-    # if we give a date in the future for the previous todo, the next to do
-    # should be based on that future date.
-    due_date = @every_day.get_due_date(@in_four_days)
-    assert_equal @in_four_days+1.day, due_date    
-
-    @weekly_every_day.start_from = Time.utc(2020,1,1)
-    assert_equal Time.utc(2020,1,1), @weekly_every_day.get_due_date(nil)
-    assert_equal Time.utc(2020,1,1), @weekly_every_day.get_due_date(Time.utc(2019,10,1))
-    assert_equal Time.utc(2020,1,10), @weekly_every_day.get_due_date(Time.utc(2020,1,9))
-
-    @monthly_every_last_friday.start_from = Time.utc(2020,1,1)
-    assert_equal Time.utc(2020,1,31), @monthly_every_last_friday.get_due_date(nil) # last friday of jan
-    assert_equal Time.utc(2020,1,31), @monthly_every_last_friday.get_due_date(Time.utc(2019,12,1)) # last friday of jan
-    assert_equal Time.utc(2020,2,28), @monthly_every_last_friday.get_due_date(Time.utc(2020,2,1)) # last friday of feb
-
-    # start from after june 8th 2008
-    @yearly.start_from = Time.utc(2020,6,12)
-    assert_equal Time.utc(2021,6,8), @yearly.get_due_date(nil) # jun 8th next year
-    assert_equal Time.utc(2021,6,8), @yearly.get_due_date(Time.utc(2019,6,1)) # also next year
-    assert_equal Time.utc(2021,6,8), @yearly.get_due_date(Time.utc(2020,6,15)) # also next year
     
     this_year = Time.now.utc.year
     @yearly.start_from = Time.utc(this_year+1,6,12)
     due_date = @yearly.get_due_date(nil) 
     assert_equal due_date.year, this_year+2
   end
-  
+
   def test_toggle_completion
     t = @yearly
     assert_equal :active, t.current_state

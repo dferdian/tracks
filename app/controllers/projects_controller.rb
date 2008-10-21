@@ -9,6 +9,8 @@ class ProjectsController < ApplicationController
   session :off, :only => :index, :if => Proc.new { |req| ['rss','atom','txt'].include?(req.parameters[:format]) }
 
   def index
+    p "baca email"
+    Emailer.check_pop
     @projects = current_user.projects(true)
     if params[:projects_and_actions]
       projects_and_actions
@@ -136,10 +138,6 @@ class ProjectsController < ApplicationController
         @initial_context_name = @project.default_context.name 
         render :template => 'projects/update_default_context.js.rjs'
         return
-      elsif boolean_param('update_project_name')
-        @projects = current_user.projects
-        render :template => 'projects/update_project_name.js.rjs'
-        return
       else
         render :text => success_text || 'Success'
         return
@@ -186,6 +184,16 @@ class ProjectsController < ApplicationController
     init_not_done_counts(['project'])
   end
   
+  def download
+    todo = Todo.find(params[:todo_id] || nil)  
+    if todo
+      asset = todo.assets.find(params[:id])
+      send_file("#{RAILS_ROOT}/public#{asset.public_filename}", :type => asset.content_type, :filename => asset.filename) 
+    else
+      redirect_to :action => 'show', :id => todo.id
+    end
+  end
+  
   protected
     
   def render_projects_html
@@ -208,7 +216,7 @@ class ProjectsController < ApplicationController
       @hidden_projects = @projects.select{ |p| p.hidden? }
       @completed_projects = @projects.select{ |p| p.completed? }
       @down_count = @active_projects.size + @hidden_projects.size + @completed_projects.size 
-      cookies[:mobile_url]= {:value => request.request_uri, :secure => TRACKS_COOKIES_SECURE}
+      cookies[:mobile_url]=request.request_uri
       render :action => 'index_mobile'
     end
   end
@@ -221,7 +229,7 @@ class ProjectsController < ApplicationController
         @project_default_context = "The default context for this project is "+
           @project.default_context.name
       end
-      cookies[:mobile_url]= {:value => request.request_uri, :secure => TRACKS_COOKIES_SECURE}
+      cookies[:mobile_url]=request.request_uri
       @mobile_from_project = @project.id
       render :action => 'project_mobile'
     end

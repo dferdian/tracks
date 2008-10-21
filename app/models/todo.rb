@@ -1,10 +1,11 @@
 class Todo < ActiveRecord::Base
-
+  require 'net/imap'
+  require 'pp'
   belongs_to :context
   belongs_to :project
   belongs_to :user
   belongs_to :recurring_todo
-  
+  has_many :assets, :as => :contentasset
   STARRED_TAG_NAME = "starred"
   
   acts_as_state_machine :initial => :active, :column => 'state'
@@ -15,7 +16,46 @@ class Todo < ActiveRecord::Base
   state :project_hidden
   state :completed, :enter => Proc.new { |t| t.completed_at = Time.now.utc }, :exit => Proc.new { |t| t.completed_at = nil }
   state :deferred
-
+  
+  def self.create_task_from_email(email, user_id)
+    user = User.find(user_id)
+    if user
+      task = Todo.new
+      task.description = email.subject
+      
+      ## process content email
+      if email.content_type == 'text/html' || email.body.split("<html>").first.nil?
+        content = email.body.split("</head>")[1]
+        task.notes = "<html>#{content}"
+      else
+        content = email.body.split("<html>").first # remove HTML ads
+        ## handle multiple ads and forwarding message
+        content = content.split("---------------------------------").first # remove another ads
+        content = content.split("__________________________________________________").first
+        content = content.split("<").first # remove another ads
+        content = content.split("<hr/>").first # remove another ads
+        content = content.split("Do You Yahoo").first ## handle Yahoo! ads
+        content = content.split("<hr/>").first # remove another ads
+        task.notes = content
+      end
+      
+      task.user_id = user.id      
+      task.project_id = user.preference.default_project_for_mail
+      task.context_id = user.preference.default_context_for_mail
+      task.state = "active"
+      task.created_at = email.date
+      email.attachments
+      unless email.attachments.nil?
+        email.attachments.each do |attachment|
+          asset = Asset.new()
+          asset.uploaded_data = attachment
+          task.assets << asset
+        end 
+      end
+      task.save
+    end
+  end
+  
   event :defer do
     transitions :to => :deferred, :from => [:active]
   end

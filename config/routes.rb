@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :smtp_settings
+
   UJS::routes
   
   map.with_options :controller => 'login' do |login|
@@ -27,9 +29,9 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :projects, :collection => {:order => :post, :alphabetize => :post} do |projects|
     projects.resources :todos, :name_prefix => "project_"
   end
-
+  map.download_s3 'todos/:todo_id/file/:id/:file_name', :controller => "todos", :action => "file", :file_name => /.*/
   map.resources :todos,
-                :member => {:toggle_check => :put, :toggle_star => :put},
+                :member => {:file => :get, :toggle_check => :put, :toggle_star => :put},
                 :collection => {:check_deferred => :post, :filter_to_context => :post, :filter_to_project => :post}
   map.with_options :controller => "todos" do |todos|
     todos.home '', :action => "index"
@@ -45,7 +47,6 @@ ActionController::Routing::Routes.draw do |map|
     # routed to mobile view of tags.
     todos.tag 'todos/tag/:name', :action => "tag", :format => 'm', :name => /.*\.m/
     todos.tag 'todos/tag/:name', :action => "tag", :name => /.*/
-    
     todos.mobile 'mobile', :action => "index", :format => 'm'
     todos.mobile_abbrev 'm', :action => "index", :format => 'm'
     todos.mobile_abbrev_new 'm/new', :action => "new", :format => 'm'

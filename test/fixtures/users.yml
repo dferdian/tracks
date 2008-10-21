@@ -1,30 +1,39 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-admin_user:
-  id: 1
-  login: admin
-  crypted_password: <%= Digest::SHA1.hexdigest("#{Tracks::Config.salt}--abracadabra--") %>
-  token: <%= Digest::SHA1.hexdigest("adminSat Feb 25 17:14:00 GMT 20060.236961325863376") %>
-  is_admin: true
-  first_name: Admin
-  last_name: Schmadmin
-  auth_type: database
-
-other_user:
-  id: 2
-  login: jane
-  crypted_password: <%= Digest::SHA1.hexdigest("#{Tracks::Config.salt}--sesame--") %>
+--- 
+users_001: 
+  open_id_url: 
+  crypted_password: <%= Digest::SHA1.hexdigest("#{Tracks::Config.salt}--administrator--") %>
   token: <%= Digest::SHA1.hexdigest("janeSun Feb 19 14:42:45 GMT 20060.408173979260027") %>
-  is_admin: false
-  first_name: Jane
-  last_name: Doe
+  remember_token_expires_at: 
+  is_admin: "1"
+  id: "1"
   auth_type: database
-
-ldap_user:
-  id: 3
-  login: john
-  crypted_password: test
-  token: <%= Digest::SHA1.hexdigest("johnSun Feb 19 14:42:45 GMT 20060.408173979260027") %>
-  is_admin: false
-  first_name: John
-  last_name: Deere
-  auth_type: ldap
+  remember_token: 
+  first_name: 
+  last_name: 
+  login: administrator
+  email: mtessar.tracks@gmail.com
+users_002: 
+  open_id_url: 
+  crypted_password: <%= Digest::SHA1.hexdigest("#{Tracks::Config.salt}--12345--") %>
+  token: <%= Digest::SHA1.hexdigest("janeSun Feb 19 14:42:45 GMT 20060.408173979260027") %>
+  remember_token_expires_at: 2008-09-09 19:12:55
+  is_admin: "0"
+  id: "2"
+  auth_type: database
+  remember_token: 
+  first_name: Matt
+  last_name: Tessar
+  login: Matt
+  email: mtessar.tracks@gmail.com
+users_003: 
+  open_id_url: 
+  crypted_password: <%= Digest::SHA1.hexdigest("#{Tracks::Config.salt}--12345--") %>
+  token: <%= Digest::SHA1.hexdigest("janeSun Feb 19 14:42:45 GMT 20060.408173979260027") %>
+  remember_token_expires_at: 2008-09-08 20:08:37
+  is_admin: "0"
+  id: "3"
+  auth_type: database
+  remember_token: 
+  first_name: 
+  last_name: 
+  login: shelly

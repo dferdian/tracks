@@ -1,7 +1,8 @@
 # The methods added to this helper will be available to all templates in the
 # application.
 module ApplicationHelper
-  
+  require 'aws/s3'
+  include AWS::S3
   def user_time
     Time.zone.now
   end
@@ -142,6 +143,16 @@ module ApplicationHelper
     type = type.to_s  # symbol to string
     page.replace 'flash', "<h4 id='flash' class='alert #{type}'>#{message}</h4>" 
     page.visual_effect :fade, 'flash', :duration => fade_duration
+  end
+  
+  def set_link_download(asset)
+    bucket = Bucket.find("tracks.development")
+    bucket.objects.each do |object|
+      if object.key.split("/").include?(asset.filename)
+        return "#{link_to asset.filename, asset.public_filename}"
+      end
+    end
+    return "#{link_to_function "#{asset.filename}", "alert('#{asset.filename} can not find in s3.amazoneaws')"}"
   end
   
 end

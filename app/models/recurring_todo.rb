@@ -394,19 +394,11 @@ class RecurringTodo < ActiveRecord::Base
     # the due date in time)
     # 
     # assumes self.recurring_period == 'daily'
-  
-    # determine start
     if previous.nil?
       start = self.start_from.nil? ? Time.now.utc : self.start_from
     else
       # use the next day
       start = previous + 1.day
-
-      unless self.start_from.nil?
-        # check if the start_from date is later than previous. If so, use
-        # start_from as start to search for next date
-        start = self.start_from if self.start_from > previous 
-      end
     end
 
     if self.only_work_days
@@ -427,7 +419,6 @@ class RecurringTodo < ActiveRecord::Base
   end
   
   def get_weekly_date(previous)
-    # determine start
     if previous == nil
       start = self.start_from.nil? ? Time.now.utc : self.start_from
     else
@@ -437,13 +428,7 @@ class RecurringTodo < ActiveRecord::Base
         # that week
         start += self.every_other1.week
       end
-      unless self.start_from.nil?
-        # check if the start_from date is later than previous. If so, use
-        # start_from as start to search for next date
-        start = self.start_from if self.start_from > previous 
-      end
     end
-    
     # check if there are any days left this week for the next todo
     start.wday().upto 6 do |i|
       return start + (i-start.wday()).days unless self.every_day[i,1] == ' '
@@ -462,8 +447,11 @@ class RecurringTodo < ActiveRecord::Base
   end
   
   def get_monthly_date(previous)
-    
-    start = determine_start(previous)
+    if previous.nil?
+      start = self.start_from.nil? ? Time.now.utc : self.start_from
+    else
+      start = previous
+    end
     day = self.every_other1
     n = self.every_other2
     
@@ -517,8 +505,12 @@ class RecurringTodo < ActiveRecord::Base
   end
   
   def get_yearly_date(previous)
+    if previous.nil?
+      start = self.start_from.nil? ? Time.now.utc : self.start_from
+    else
+      start = previous
+    end
 
-    start = determine_start(previous)
     day = self.every_other1
     month = self.every_other2
     
@@ -598,21 +590,6 @@ class RecurringTodo < ActiveRecord::Base
   
   def validate
     errors.add("", "At least one day must be selected in the weekly pattern") if self.every_day == '       '
-  end
-  
-  def determine_start(previous)
-    if previous.nil?
-      start = self.start_from.nil? ? Time.now.utc : self.start_from
-    else
-      start = previous
-
-      unless self.start_from.nil?
-        # check if the start_from date is later than previous. If so, use
-        # start_from as start to search for next date
-        start = self.start_from if self.start_from > previous 
-      end
-    end
-    return start
   end
   
 end
