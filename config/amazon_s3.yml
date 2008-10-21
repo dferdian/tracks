@@ -1,14 +1,14 @@
 development:
-  bucket_name: tracks.development
-  access_key_id:  0VE4BRYDMSRHYG0X93R2
-  secret_access_key: a6W0PzS9MydgO//TQua0ooOx7YI+RkjWOOfUqcv8
+  bucket_name: 
+  access_key_id:  
+  secret_access_key: 
 
 test:
-  bucket_name: tracks.development
-  access_key_id:  0VE4BRYDMSRHYG0X93R2
-  secret_access_key: a6W0PzS9MydgO//TQua0ooOx7YI+RkjWOOfUqcv8
-
+  bucket_name: 
+  access_key_id:  
+  secret_access_key: 
+  
 production:
-  bucket_name: tracks.production
-  access_key_id:  0VE4BRYDMSRHYG0X93R2
-  secret_access_key: a6W0PzS9MydgO//TQua0ooOx7YI+RkjWOOfUqcv8
+  bucket_name: 
+  access_key_id:  
+  secret_access_key: 
