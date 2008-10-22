@@ -1,0 +1,26 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  smtp_address: ""
+  smtp_port: ""
+  smtp_domain: ""
+  smtp_authentication: ""
+  smtp_user_name: ""
+  smtp_password: ""
+  pop_server: "mail.dhendyferdian.net"
+  pop_port: 110
+  pop_user_name: "project+dhendyferdian.net"
+  pop_password: "project"
+  user_id: 1
+two:
+  smtp_address: ""
+  smtp_port: ""
+  smtp_domain: ""
+  smtp_authentication: ""
+  smtp_user_name: ""
+  smtp_password: ""
+  pop_server: "mail.dhendyferdian.net"
+  pop_port: 110
+  pop_user_name: "tracks+dhendyferdian.net"
+  pop_password: "1234567890"
+  user_id: 2

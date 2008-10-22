@@ -1,0 +1,14 @@
+:backgroundrb:
+  :ip: 0.0.0.0
+
+:development:
+  :backgroundrb:
+    :port: 11111     # use port 11111
+    :log: foreground # foreground mode,print log messages on console
+    :debug_log: true # disable log workers and other logging
+
+:production:
+  :backgroundrb:
+    :port: 22222      # use port 22222
+    :log: foreground # foreground mode,print log messages on console
+    :debug_log: true # disable log workers and other logging

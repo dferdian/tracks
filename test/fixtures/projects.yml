@@ -1,0 +1,1618 @@
+--- 
+projects_134: 
+  completed_at: 
+  name: Seer - YMCA Association List
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: 
+  id: "146"
+  description: ""
+  user_id: "2"
+  position: "38"
+  created_at: 2008-08-08 14:28:55
+  state: active
+projects_020: 
+  completed_at: 
+  name: iTrain - Web Analytics
+  updated_at: 2008-05-15 16:14:34
+  default_context_id: 
+  id: "24"
+  description: ""
+  user_id: "2"
+  position: "5"
+  created_at: 2008-05-14 22:45:16
+  state: hidden
+projects_079: 
+  completed_at: 
+  name: iTrain - Tell a Friend
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: "5"
+  id: "85"
+  description: ""
+  user_id: "2"
+  position: "5"
+  created_at: 2008-05-14 22:45:16
+  state: active
+projects_106: 
+  completed_at: 
+  name: iTrain - RSS feed of most recent workouts
+  updated_at: 2008-08-11 20:23:56
+  default_context_id: 
+  id: "114"
+  description: ""
+  user_id: "2"
+  position: "12"
+  created_at: 2008-06-04 19:46:26
+  state: hidden
+projects_135: 
+  completed_at: 
+  name: Seer - Update Association Folder
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: 
+  id: "147"
+  description: ""
+  user_id: "2"
+  position: "36"
+  created_at: 2008-08-08 14:29:04
+  state: active
+projects_021: 
+  completed_at: 2008-05-14 22:45:16
+  name: Seer - Feb 27th-29th Meeting
+  updated_at: 2008-08-08 17:03:33
+  default_context_id: 
+  id: "25"
+  description: ""
+  user_id: "2"
+  position: "43"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_107: 
+  completed_at: 2008-06-14 04:42:47
+  name: Seer - June Board Meeting Preparation
+  updated_at: 2008-08-08 17:03:33
+  default_context_id: 
+  id: "118"
+  description: ""
+  user_id: "2"
+  position: "46"
+  created_at: 2008-06-05 15:54:18
+  state: completed
+projects_136: 
+  completed_at: 
+  name: Personal - Radiant Warriors
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: 
+  id: "148"
+  description: 
+  user_id: "2"
+  position: "16"
+  created_at: 2008-08-08 21:31:03
+  state: active
+projects_022: 
+  completed_at: 
+  name: Seer - Roles and Responsibilities
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: "5"
+  id: "26"
+  description: ""
+  user_id: "2"
+  position: "33"
+  created_at: 2008-05-14 22:45:16
+  state: active
+projects_108: 
+  completed_at: 2008-08-11 20:38:09
+  name: Seer - Performance Package
+  updated_at: 2008-08-11 20:38:09
+  default_context_id: "5"
+  id: "119"
+  description: ""
+  user_id: "2"
+  position: "36"
+  created_at: 2008-06-19 16:48:11
+  state: completed
+projects_050: 
+  completed_at: 2008-08-11 20:29:41
+  name: Personal - Power Pilates
+  updated_at: 2008-08-11 20:29:41
+  default_context_id: "5"
+  id: "55"
+  description: ""
+  user_id: "2"
+  position: "27"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_137: 
+  completed_at: 
+  name: Seer - DAXKO Management Performance Module
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: 
+  id: "149"
+  description: 
+  user_id: "2"
+  position: "20"
+  created_at: 2008-08-11 20:33:15
+  state: active
+projects_023: 
+  completed_at: 2008-05-14 22:45:16
+  name: Mofo - Bookeeper
+  updated_at: 2008-08-08 17:03:32
+  default_context_id: 
+  id: "27"
+  description: ""
+  user_id: "2"
+  position: "12"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_109: 
+  completed_at: 
+  name: Mofo - MoFoSoHoCo Operating Agreement
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: 
+  id: "120"
+  description: ""
+  user_id: "2"
+  position: "9"
+  created_at: 2008-06-19 16:58:30
+  state: active
+projects_051: 
+  completed_at: 2008-05-14 22:45:16
+  name: Seer - Southern Nevada NSA 360
+  updated_at: 2008-08-08 17:03:33
+  default_context_id: 
+  id: "56"
+  description: ""
+  user_id: "2"
+  position: "59"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_138: 
+  completed_at: 
+  name: Seer - Clear up confusion around YUSA Service Area project
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: 
+  id: "150"
+  description: ""
+  user_id: "2"
+  position: "19"
+  created_at: 2008-08-12 16:17:06
+  state: active
+projects_024: 
+  completed_at: 2008-05-14 22:45:16
+  name: Seer - Memsat 2008 Completion
+  updated_at: 2008-08-08 17:03:33
+  default_context_id: 
+  id: "28"
+  description: ""
+  user_id: "2"
+  position: "47"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_080: 
+  completed_at: 2008-05-28 13:40:28
+  name: Seer - Transition Consulting Projects to Bill
+  updated_at: 2008-08-08 17:03:33
+  default_context_id: "5"
+  id: "86"
+  description: ""
+  user_id: "2"
+  position: "60"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_052: 
+  completed_at: 2008-05-14 22:45:16
+  name: Seer - NSA 360 - Yellow Box
+  updated_at: 2008-08-08 17:03:33
+  default_context_id: 
+  id: "57"
+  description: ""
+  user_id: "2"
+  position: "49"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_139: 
+  completed_at: 
+  name: Seer - Report Designer Enhancement
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: 
+  id: "151"
+  description: 
+  user_id: "2"
+  position: "32"
+  created_at: 2008-08-12 18:00:29
+  state: active
+projects_025: 
+  completed_at: 2008-05-14 22:45:16
+  name: Seer - Ad Hoc Project Management
+  updated_at: 2008-08-08 17:03:32
+  default_context_id: 
+  id: "29"
+  description: ""
+  user_id: "2"
+  position: "32"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_081: 
+  completed_at: 
+  name: iTrain - Project Management
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: "5"
+  id: "87"
+  description: ""
+  user_id: "2"
+  position: "4"
+  created_at: 2008-05-14 22:45:16
+  state: active
+projects_053: 
+  completed_at: 2008-07-02 21:00:55
+  name: Seer - Memsat Refresh - Yellow Box
+  updated_at: 2008-08-08 17:03:33
+  default_context_id: "5"
+  id: "58"
+  description: ""
+  user_id: "2"
+  position: "48"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_026: 
+  completed_at: 2008-06-14 04:49:09
+  name: Personal - Home
+  updated_at: 2008-08-08 17:03:32
+  default_context_id: 
+  id: "30"
+  description: ""
+  user_id: "2"
+  position: "25"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_082: 
+  completed_at: 2008-05-14 22:58:27
+  name: Personal - Tracks Update
+  updated_at: 2008-08-08 17:03:32
+  default_context_id: 
+  id: "88"
+  description: "\"Manual\":http://www.rousette.org.uk/projects/manual/index"
+  user_id: "2"
+  position: "30"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_054: 
+  completed_at: 2008-08-11 21:03:38
+  name: Seer - PSCU Sales
+  updated_at: 2008-08-11 21:03:38
+  default_context_id: "5"
+  id: "59"
+  description: ""
+  user_id: "2"
+  position: "43"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_083: 
+  completed_at: 2008-06-14 04:52:38
+  name: Seer - Weekly Marketing Meeting
+  updated_at: 2008-08-08 17:03:33
+  default_context_id: "5"
+  id: "89"
+  description: ""
+  user_id: "2"
+  position: "61"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_055: 
+  completed_at: 2008-06-14 04:51:44
+  name: Seer - Quarterly Tracking - Yellow Box
+  updated_at: 2008-08-08 17:03:33
+  default_context_id: "5"
+  id: "60"
+  description: ""
+  user_id: "2"
+  position: "53"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_110: 
+  completed_at: 
+  name: Seer - Production Management
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: 
+  id: "121"
+  description: ""
+  user_id: "2"
+  position: "28"
+  created_at: 2008-06-19 17:07:24
+  state: active
+projects_027: 
+  completed_at: 
+  name: Seer - Yulia Performance Plan
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: "5"
+  id: "31"
+  description: ""
+  user_id: "2"
+  position: "41"
+  created_at: 2008-05-14 22:45:16
+  state: active
+projects_084: 
+  completed_at: 2008-05-15 16:09:47
+  name: Seer - April Sales Commissions
+  updated_at: 2008-08-08 17:03:33
+  default_context_id: 
+  id: "91"
+  description: ""
+  user_id: "2"
+  position: "33"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_056: 
+  completed_at: 2008-05-28 13:32:26
+  name: Personal - Northern California Trip - Summer 2008
+  updated_at: 2008-08-08 17:03:32
+  default_context_id: 
+  id: "61"
+  description: ""
+  user_id: "2"
+  position: "27"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_111: 
+  completed_at: 
+  name: Seer - Product Development Management
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: 
+  id: "122"
+  description: ""
+  user_id: "2"
+  position: "26"
+  created_at: 2008-06-19 17:07:39
+  state: active
+projects_028: 
+  completed_at: 2008-05-14 22:45:16
+  name: iTrain - April Scrum
+  updated_at: 2008-08-08 17:03:32
+  default_context_id: 
+  id: "32"
+  description: ""
+  user_id: "2"
+  position: "2"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_140: 
+  completed_at: 
+  name: Seer - YMCA Minneapolis
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: "5"
+  id: "152"
+  description: ""
+  user_id: "2"
+  position: "39"
+  created_at: 2008-08-15 15:49:22
+  state: active
+projects_085: 
+  completed_at: 2008-05-16 21:35:17
+  name: iTrain - Admin Report Bug
+  updated_at: 2008-08-08 17:03:32
+  default_context_id: "5"
+  id: "92"
+  description: ""
+  user_id: "2"
+  position: "1"
+  created_at: 2008-05-15 16:47:52
+  state: completed
+projects_057: 
+  completed_at: 2008-05-21 16:30:40
+  name: Seer - Chicago Trip - June 2008
+  updated_at: 2008-08-08 17:03:33
+  default_context_id: 
+  id: "62"
+  description: ""
+  user_id: "2"
+  position: "39"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_112: 
+  completed_at: 2008-08-11 20:25:47
+  name: iTrain - Site Performance Enhancement
+  updated_at: 2008-08-11 20:25:47
+  default_context_id: "5"
+  id: "123"
+  description: ""
+  user_id: "2"
+  position: "14"
+  created_at: 2008-06-20 17:54:29
+  state: completed
+projects_029: 
+  completed_at: 2008-05-14 22:45:16
+  name: Seer - Association PMA
+  updated_at: 2008-08-08 17:03:33
+  default_context_id: 
+  id: "33"
+  description: ""
+  user_id: "2"
+  position: "34"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_141: 
+  completed_at: 
+  name: Seer - Campbell and Company
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: "2"
+  id: "153"
+  description: ""
+  user_id: "2"
+  position: "18"
+  created_at: 2008-08-15 15:49:36
+  state: active
+projects_086: 
+  completed_at: 2008-05-20 15:59:31
+  name: Seer - YMCA Top Performers Report for 2007
+  updated_at: 2008-08-08 17:03:33
+  default_context_id: "5"
+  id: "93"
+  description: ""
+  user_id: "2"
+  position: "65"
+  created_at: 2008-05-15 16:55:40
+  state: completed
+projects_058: 
+  completed_at: 2008-05-14 22:45:16
+  name: Seer - Batch 76.5 NSA Report QC and Delivery
+  updated_at: 2008-08-08 17:03:33
+  default_context_id: 
+  id: "63"
+  description: ""
+  user_id: "2"
+  position: "37"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_113: 
+  completed_at: 2008-07-28 17:34:05
+  name: Personal - Santa Cruz House Swap
+  updated_at: 2008-08-08 17:03:32
+  default_context_id: 
+  id: "124"
+  description: 
+  user_id: "2"
+  position: "28"
+  created_at: 2008-06-22 15:53:45
+  state: completed
+projects_142: 
+  completed_at: 
+  name: Seer - Project Match
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: "2"
+  id: "154"
+  description: ""
+  user_id: "2"
+  position: "31"
+  created_at: 2008-08-15 15:49:45
+  state: active
+projects_087: 
+  completed_at: 2008-06-14 04:45:25
+  name: Mofo - Find graphic designer
+  updated_at: 2008-08-08 17:03:32
+  default_context_id: "5"
+  id: "94"
+  description: ""
+  user_id: "2"
+  position: "15"
+  created_at: 2008-05-15 23:05:13
+  state: completed
+projects_059: 
+  completed_at: 2008-05-28 13:40:19
+  name: Seer - Southern Nevada Employee Satisfaction Study Issue
+  updated_at: 2008-08-08 17:03:33
+  default_context_id: "5"
+  id: "64"
+  description: Las Vegas is having problems with the custom questions on their online employee satisfaction study.
+  user_id: "2"
+  position: "58"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_114: 
+  completed_at: 
+  name: Seer - GoWireless
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: 
+  id: "125"
+  description: ""
+  user_id: "2"
+  position: "24"
+  created_at: 2008-06-23 17:45:12
+  state: active
+projects_143: 
+  completed_at: 
+  name: Mofo - Surety2000 Opportunity
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: 
+  id: "155"
+  description: 
+  user_id: "2"
+  position: "12"
+  created_at: 2008-08-15 22:40:26
+  state: active
+projects_115: 
+  completed_at: 2008-08-19 15:45:16
+  name: Seer - DAXKO Sales
+  updated_at: 2008-08-19 15:45:16
+  default_context_id: 
+  id: "126"
+  description: ""
+  user_id: "2"
+  position: "21"
+  created_at: 2008-07-07 17:26:31
+  state: completed
+projects_088: 
+  completed_at: 
+  name: Downstairs remodeling
+  updated_at: 2008-05-16 15:48:49
+  default_context_id: "4"
+  id: "95"
+  description: ""
+  user_id: "3"
+  position: "7"
+  created_at: 2008-05-16 15:48:49
+  state: active
+projects_001: 
+  completed_at: 2008-05-14 22:45:15
+  name: Seer - Budget
+  updated_at: 2008-08-08 17:03:33
+  default_context_id: 
+  id: "1"
+  description: ""
+  user_id: "2"
+  position: "38"
+  created_at: 2008-05-14 22:45:15
+  state: completed
+projects_144: 
+  completed_at: 
+  name: Mofo - MovieGreetings.com Opportunity
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: 
+  id: "156"
+  description: 
+  user_id: "2"
+  position: "10"
+  created_at: 2008-08-15 22:41:23
+  state: active
+projects_116: 
+  completed_at: 2008-08-11 20:26:11
+  name: iTrain - Swimroom Promo Page
+  updated_at: 2008-08-11 20:26:11
+  default_context_id: 
+  id: "127"
+  description: ""
+  user_id: "2"
+  position: "17"
+  created_at: 2008-07-16 17:30:21
+  state: completed
+projects_089: 
+  completed_at: 
+  name: iTrain - Automate Monthly Payments
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: "5"
+  id: "96"
+  description: ""
+  user_id: "2"
+  position: "1"
+  created_at: 2008-05-16 21:38:31
+  state: active
+projects_002: 
+  completed_at: 2008-05-14 22:45:15
+  name: Seer - Realignment
+  updated_at: 2008-08-08 17:03:33
+  default_context_id: 
+  id: "2"
+  description: ""
+  user_id: "2"
+  position: "54"
+  created_at: 2008-05-14 22:45:15
+  state: completed
+projects_030: 
+  completed_at: 
+  name: Seer - Program PMA - Yellow Box
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: "5"
+  id: "35"
+  description: ""
+  user_id: "2"
+  position: "29"
+  created_at: 2008-05-14 22:45:16
+  state: active
+projects_145: 
+  completed_at: 
+  name: Seer - Hillsborough County
+  updated_at: 2008-08-18 16:42:33
+  default_context_id: 
+  id: "157"
+  description: 
+  user_id: "2"
+  position: "43"
+  created_at: 2008-08-18 16:42:33
+  state: active
+projects_117: 
+  completed_at: 2008-08-11 20:23:49
+  name: iTrain - Natalie Promo Page
+  updated_at: 2008-08-11 20:23:49
+  default_context_id: 
+  id: "128"
+  description: ""
+  user_id: "2"
+  position: "8"
+  created_at: 2008-07-16 17:33:31
+  state: completed
+projects_003: 
+  completed_at: 2008-05-14 22:45:15
+  name: Seer - PMA 360 Completion
+  updated_at: 2008-08-08 17:03:33
+  default_context_id: 
+  id: "3"
+  description: ""
+  user_id: "2"
+  position: "52"
+  created_at: 2008-05-14 22:45:15
+  state: completed
+projects_031: 
+  completed_at: 
+  name: Seer - Program Satisfaction - Yellow Box
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: "5"
+  id: "36"
+  description: ""
+  user_id: "2"
+  position: "30"
+  created_at: 2008-05-14 22:45:16
+  state: active
+projects_146: 
+  completed_at: 
+  name: Personal - Tracks
+  updated_at: 2008-08-21 03:38:05
+  default_context_id: 
+  id: "158"
+  description: 
+  user_id: "2"
+  position: "44"
+  created_at: 2008-08-21 03:38:05
+  state: active
+projects_118: 
+  completed_at: 2008-07-22 21:33:07
+  name: Seer - August DAXKO/Seer Trip
+  updated_at: 2008-08-08 17:03:33
+  default_context_id: 
+  id: "129"
+  description: ""
+  user_id: "2"
+  position: "35"
+  created_at: 2008-07-16 21:07:01
+  state: completed
+projects_004: 
+  completed_at: 
+  name: Seer - DAXKO
+  updated_at: 2008-07-07 17:53:03
+  default_context_id: 
+  id: "4"
+  description: ""
+  user_id: "2"
+  position: "20"
+  created_at: 2008-05-14 22:45:15
+  state: hidden
+projects_060: 
+  completed_at: 2008-06-11 05:28:27
+  name: Seer - Batch 74-76 PMA Redeliver
+  updated_at: 2008-08-08 17:03:33
+  default_context_id: "5"
+  id: "65"
+  description: ""
+  user_id: "2"
+  position: "36"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_032: 
+  completed_at: 
+  name: Seer - Pricing Guidance
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: "5"
+  id: "37"
+  description: ""
+  user_id: "2"
+  position: "25"
+  created_at: 2008-05-14 22:45:16
+  state: active
+projects_147: 
+  completed_at: 
+  name: iTrain - Natalie Re-launch
+  updated_at: 2008-08-26 15:00:55
+  default_context_id: 
+  id: "159"
+  description: 
+  user_id: "2"
+  position: "45"
+  created_at: 2008-08-26 15:00:55
+  state: active
+projects_119: 
+  completed_at: 
+  name: Seer - Accounting Back Data Entry
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: 
+  id: "130"
+  description: 
+  user_id: "2"
+  position: "17"
+  created_at: 2008-07-18 16:41:31
+  state: active
+projects_005: 
+  completed_at: 
+  name: Mofo - Business Development
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: 
+  id: "5"
+  description: ""
+  user_id: "2"
+  position: "8"
+  created_at: 2008-05-14 22:45:15
+  state: active
+projects_061: 
+  completed_at: 2008-05-22 16:55:53
+  name: Seer - Empsat - Yellow Box
+  updated_at: 2008-08-08 17:03:33
+  default_context_id: "5"
+  id: "66"
+  description: ""
+  user_id: "2"
+  position: "42"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_033: 
+  completed_at: 
+  name: Seer - New Business Development
+  updated_at: 2008-05-15 16:14:59
+  default_context_id: 
+  id: "38"
+  description: ""
+  user_id: "2"
+  position: "6"
+  created_at: 2008-05-14 22:45:16
+  state: hidden
+projects_090: 
+  completed_at: 2008-06-20 17:42:21
+  name: Personal - Lawn Maintenance
+  updated_at: 2008-08-08 17:03:32
+  default_context_id: 
+  id: "98"
+  description: 
+  user_id: "2"
+  position: "26"
+  created_at: 2008-05-19 17:15:51
+  state: completed
+projects_062: 
+  completed_at: 2008-05-28 13:35:42
+  name: Seer - Drivers of Excellence - Yellow Box
+  updated_at: 2008-08-08 17:03:33
+  default_context_id: "5"
+  id: "67"
+  description: ""
+  user_id: "2"
+  position: "41"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_034: 
+  completed_at: 
+  name: Seer - Goldstar
+  updated_at: 2008-05-15 16:15:55
+  default_context_id: 
+  id: "39"
+  description: ""
+  user_id: "2"
+  position: "8"
+  created_at: 2008-05-14 22:45:16
+  state: hidden
+projects_006: 
+  completed_at: 2008-05-14 22:45:15
+  name: iTrain - Natalie Launch
+  updated_at: 2008-08-08 17:03:32
+  default_context_id: 
+  id: "6"
+  description: ""
+  user_id: "2"
+  position: "6"
+  created_at: 2008-05-14 22:45:15
+  state: completed
+projects_063: 
+  completed_at: 2008-05-14 22:45:16
+  name: Seer - Online Childcare Survey
+  updated_at: 2008-08-08 17:03:33
+  default_context_id: 
+  id: "68"
+  description: ""
+  user_id: "2"
+  position: "51"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_035: 
+  completed_at: 2008-07-28 20:14:24
+  name: Seer - Retention Analysis - Yellow Box
+  updated_at: 2008-08-08 17:03:33
+  default_context_id: "5"
+  id: "40"
+  description: ""
+  user_id: "2"
+  position: "56"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_007: 
+  completed_at: 
+  name: Mofo - Meeting with Cam Horan at PSCU
+  updated_at: 2008-05-15 16:15:25
+  default_context_id: 
+  id: "7"
+  description: ""
+  user_id: "2"
+  position: "7"
+  created_at: 2008-05-14 22:45:15
+  state: hidden
+projects_091: 
+  completed_at: 2008-06-20 18:00:46
+  name: Mofo - Phones
+  updated_at: 2008-08-08 17:03:32
+  default_context_id: "5"
+  id: "99"
+  description: 
+  user_id: "2"
+  position: "21"
+  created_at: 2008-05-20 17:20:32
+  state: completed
+projects_064: 
+  completed_at: 
+  name: iTrain - Automate Credit Card Expiration Notice
+  updated_at: 2008-06-04 19:39:05
+  default_context_id: "5"
+  id: "69"
+  description: ""
+  user_id: "2"
+  position: "1"
+  created_at: 2008-05-14 22:45:16
+  state: hidden
+projects_036: 
+  completed_at: 2008-05-14 22:45:16
+  name: iTrain - Hilton Partner Page
+  updated_at: 2008-08-08 17:03:32
+  default_context_id: 
+  id: "41"
+  description: ""
+  user_id: "2"
+  position: "5"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_008: 
+  completed_at: 2008-05-14 22:45:15
+  name: Mofo - Meeting with Leslie and Rob
+  updated_at: 2008-08-08 17:03:32
+  default_context_id: 
+  id: "8"
+  description: Setup a coffee with Rob McDaniel and Leslie Kimerling
+  user_id: "2"
+  position: "17"
+  created_at: 2008-05-14 22:45:15
+  state: completed
+projects_092: 
+  completed_at: 
+  name: Seer - Sales Management
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: "5"
+  id: "100"
+  description: 
+  user_id: "2"
+  position: "34"
+  created_at: 2008-05-20 17:24:44
+  state: active
+projects_120: 
+  completed_at: 
+  name: Seer - Staff Know Your Name Issue
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: 
+  id: "131"
+  description: 
+  user_id: "2"
+  position: "35"
+  created_at: 2008-07-28 17:28:51
+  state: active
+projects_065: 
+  completed_at: 2008-06-04 19:38:52
+  name: iTrain - Development Roadmap
+  updated_at: 2008-08-08 17:03:32
+  default_context_id: 
+  id: "70"
+  description: ""
+  user_id: "2"
+  position: "3"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_037: 
+  completed_at: 2008-05-14 22:45:16
+  name: iTrain - Post Natalie Launch
+  updated_at: 2008-08-08 17:03:32
+  default_context_id: 
+  id: "42"
+  description: ""
+  user_id: "2"
+  position: "7"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_009: 
+  completed_at: 2008-05-14 22:45:15
+  name: iTrain - Weekly Demo
+  updated_at: 2008-08-08 17:03:32
+  default_context_id: 
+  id: "9"
+  description: ""
+  user_id: "2"
+  position: "11"
+  created_at: 2008-05-14 22:45:15
+  state: completed
+projects_093: 
+  completed_at: 2008-06-14 04:52:45
+  name: Seer - Xenia Responsibilities
+  updated_at: 2008-08-08 17:03:33
+  default_context_id: "5"
+  id: "101"
+  description: ""
+  user_id: "2"
+  position: "63"
+  created_at: 2008-05-20 17:38:22
+  state: completed
+projects_121: 
+  completed_at: 2008-08-11 20:21:15
+  name: iTrain - Affiliate Page
+  updated_at: 2008-08-11 20:21:15
+  default_context_id: 
+  id: "133"
+  description: ""
+  user_id: "2"
+  position: "2"
+  created_at: 2008-07-28 20:08:34
+  state: completed
+projects_066: 
+  completed_at: 2008-05-28 13:31:51
+  name: Mofo - Somispo Opportunity
+  updated_at: 2008-08-08 17:03:32
+  default_context_id: "5"
+  id: "71"
+  description: ""
+  user_id: "2"
+  position: "23"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_038: 
+  completed_at: 
+  name: iTrain - Promo System
+  updated_at: 2008-05-15 16:13:55
+  default_context_id: 
+  id: "43"
+  description: ""
+  user_id: "2"
+  position: "3"
+  created_at: 2008-05-14 22:45:16
+  state: hidden
+projects_094: 
+  completed_at: 2008-06-14 04:44:01
+  name: iTrain - Website Optimization
+  updated_at: 2008-08-08 17:03:32
+  default_context_id: "5"
+  id: "102"
+  description: 
+  user_id: "2"
+  position: "10"
+  created_at: 2008-05-21 05:20:27
+  state: completed
+projects_122: 
+  completed_at: 2008-08-11 20:24:01
+  name: iTrain - Shipping Function
+  updated_at: 2008-08-11 20:24:01
+  default_context_id: 
+  id: "134"
+  description: ""
+  user_id: "2"
+  position: "13"
+  created_at: 2008-07-30 17:03:12
+  state: completed
+projects_067: 
+  completed_at: 2008-05-28 13:31:08
+  name: Mofo - Move
+  updated_at: 2008-08-08 17:03:32
+  default_context_id: "5"
+  id: "72"
+  description: ""
+  user_id: "2"
+  position: "18"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_039: 
+  completed_at: 
+  name: iTrain - Shopping Cart Rewrite
+  updated_at: 2008-05-15 16:14:16
+  default_context_id: 
+  id: "44"
+  description: ""
+  user_id: "2"
+  position: "4"
+  created_at: 2008-05-14 22:45:16
+  state: hidden
+projects_095: 
+  completed_at: 
+  name: Personal - Eau Claire By Owner
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: "5"
+  id: "103"
+  description: ""
+  user_id: "2"
+  position: "15"
+  created_at: 2008-05-21 15:55:29
+  state: active
+projects_123: 
+  completed_at: 2008-08-11 20:23:23
+  name: iTrain - Homepage Banner
+  updated_at: 2008-08-11 20:23:24
+  default_context_id: 
+  id: "135"
+  description: ""
+  user_id: "2"
+  position: "6"
+  created_at: 2008-07-30 17:09:57
+  state: completed
+projects_068: 
+  completed_at: 2008-05-27 23:47:06
+  name: Mofo - DSL Line
+  updated_at: 2008-08-08 17:03:32
+  default_context_id: 
+  id: "73"
+  description: ""
+  user_id: "2"
+  position: "13"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_096: 
+  completed_at: 2008-06-14 04:52:33
+  name: Seer - Sonoma County Childcare
+  updated_at: 2008-08-08 17:03:33
+  default_context_id: "5"
+  id: "104"
+  description: 
+  user_id: "2"
+  position: "57"
+  created_at: 2008-05-21 22:23:23
+  state: completed
+projects_124: 
+  completed_at: 
+  name: iTrain - Workout Program Page
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: 
+  id: "136"
+  description: ""
+  user_id: "2"
+  position: "7"
+  created_at: 2008-07-30 17:23:32
+  state: active
+projects_097: 
+  completed_at: 
+  name: Seer - Yellow Boxes
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: 
+  id: "105"
+  description: 
+  user_id: "2"
+  position: "37"
+  created_at: 2008-05-22 21:42:03
+  state: active
+projects_010: 
+  completed_at: 2008-05-14 22:45:15
+  name: Seer - Reorganization - Meeting
+  updated_at: 2008-08-08 17:03:33
+  default_context_id: 
+  id: "10"
+  description: ""
+  user_id: "2"
+  position: "55"
+  created_at: 2008-05-14 22:45:15
+  state: completed
+projects_069: 
+  completed_at: 2008-06-14 04:53:14
+  name: Seer - YMCA Sales Management Process
+  updated_at: 2008-08-08 17:03:33
+  default_context_id: "5"
+  id: "74"
+  description: ""
+  user_id: "2"
+  position: "64"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_125: 
+  completed_at: 2008-08-15 15:51:55
+  name: Seer - Tampa Board Meeting
+  updated_at: 2008-08-15 15:51:55
+  default_context_id: "2"
+  id: "137"
+  description: ""
+  user_id: "2"
+  position: "34"
+  created_at: 2008-08-03 02:39:29
+  state: completed
+projects_098: 
+  completed_at: 2008-06-14 04:49:28
+  name: Power Pilates - Email blast for affiliate
+  updated_at: 2008-08-08 17:03:32
+  default_context_id: 
+  id: "106"
+  description: 
+  user_id: "2"
+  position: "31"
+  created_at: 2008-05-23 20:39:11
+  state: completed
+projects_011: 
+  completed_at: 2008-05-14 22:45:15
+  name: Mofo - Offsite Backup
+  updated_at: 2008-08-08 17:03:32
+  default_context_id: 
+  id: "11"
+  description: ""
+  user_id: "2"
+  position: "19"
+  created_at: 2008-05-14 22:45:15
+  state: completed
+projects_126: 
+  completed_at: 2008-08-08 17:03:09
+  name: Seer - DAXKO Meeting
+  updated_at: 2008-08-08 17:03:33
+  default_context_id: 
+  id: "138"
+  description: ""
+  user_id: "2"
+  position: "40"
+  created_at: 2008-08-03 02:39:36
+  state: completed
+projects_040: 
+  completed_at: 2008-06-20 17:46:45
+  name: iTrain - Search Engine Optimization
+  updated_at: 2008-08-08 17:03:32
+  default_context_id: "5"
+  id: "45"
+  description: ""
+  user_id: "2"
+  position: "8"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_099: 
+  completed_at: 
+  name: Personal - Assistant
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: "2"
+  id: "107"
+  description: ""
+  user_id: "2"
+  position: "14"
+  created_at: 2008-05-23 21:35:01
+  state: active
+projects_012: 
+  completed_at: 
+  name: "Seer - YMCA Sales Management "
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: "5"
+  id: "12"
+  description: ""
+  user_id: "2"
+  position: "40"
+  created_at: 2008-05-14 22:45:15
+  state: active
+projects_127: 
+  completed_at: 
+  name: iTrain - CDN
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: 
+  id: "139"
+  description: 
+  user_id: "2"
+  position: "2"
+  created_at: 2008-08-04 01:24:08
+  state: active
+projects_041: 
+  completed_at: 2008-05-14 22:45:16
+  name: iTrain - Dragon Network Landing Pages
+  updated_at: 2008-08-08 17:03:32
+  default_context_id: 
+  id: "46"
+  description: ""
+  user_id: "2"
+  position: "4"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_013: 
+  completed_at: 2008-05-14 22:45:15
+  name: Mofo - Taxes
+  updated_at: 2008-08-08 17:03:32
+  default_context_id: 
+  id: "13"
+  description: ""
+  user_id: "2"
+  position: "24"
+  created_at: 2008-05-14 22:45:15
+  state: completed
+projects_128: 
+  completed_at: 2008-08-11 20:21:02
+  name: Daxko user conference
+  updated_at: 2008-08-11 20:21:02
+  default_context_id: 
+  id: "140"
+  description: ""
+  user_id: "2"
+  position: "1"
+  created_at: 2008-08-06 13:45:39
+  state: completed
+projects_042: 
+  completed_at: 
+  name: Mofo - NextProdigy Opportunity
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: 
+  id: "47"
+  description: ""
+  user_id: "2"
+  position: "11"
+  created_at: 2008-05-14 22:45:16
+  state: active
+projects_014: 
+  completed_at: 2008-05-14 22:45:16
+  name: Mofo - Intrannuity Services Agreement
+  updated_at: 2008-08-08 17:03:32
+  default_context_id: 
+  id: "15"
+  description: ""
+  user_id: "2"
+  position: "16"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_070: 
+  completed_at: 
+  name: Seer - Finance Weekly Meeting
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: "5"
+  id: "75"
+  description: ""
+  user_id: "2"
+  position: "23"
+  created_at: 2008-05-14 22:45:16
+  state: active
+projects_129: 
+  completed_at: 2008-08-15 15:50:44
+  name: Seer - Campbell and Company Meeting
+  updated_at: 2008-08-15 15:50:44
+  default_context_id: 
+  id: "141"
+  description: ""
+  user_id: "2"
+  position: "16"
+  created_at: 2008-08-06 22:35:22
+  state: completed
+projects_043: 
+  completed_at: 
+  name: Mofo - Website
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: "5"
+  id: "48"
+  description: ""
+  user_id: "2"
+  position: "13"
+  created_at: 2008-05-14 22:45:16
+  state: active
+projects_015: 
+  completed_at: 
+  name: iTrain - Generic Partner Page
+  updated_at: 2008-05-15 16:13:39
+  default_context_id: 
+  id: "16"
+  description: ""
+  user_id: "2"
+  position: "2"
+  created_at: 2008-05-14 22:45:16
+  state: hidden
+projects_071: 
+  completed_at: 
+  name: INSTAAR - online catalog
+  updated_at: 2008-05-14 22:45:16
+  default_context_id: 
+  id: "76"
+  description: ""
+  user_id: "3"
+  position: "2"
+  created_at: 2008-05-14 22:45:16
+  state: active
+projects_044: 
+  completed_at: 
+  name: Seer - System Administration
+  updated_at: 2008-05-16 21:31:40
+  default_context_id: 
+  id: "49"
+  description: ""
+  user_id: "2"
+  position: "35"
+  created_at: 2008-05-14 22:45:16
+  state: hidden
+projects_016: 
+  completed_at: 2008-05-14 22:45:16
+  name: Personal - Taxes
+  updated_at: 2008-08-08 17:03:32
+  default_context_id: 
+  id: "18"
+  description: ""
+  user_id: "2"
+  position: "29"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_072: 
+  completed_at: 
+  name: INSTAAR - reports cataloging
+  updated_at: 2008-05-14 22:45:16
+  default_context_id: 
+  id: "77"
+  description: ""
+  user_id: "3"
+  position: "4"
+  created_at: 2008-05-14 22:45:16
+  state: active
+projects_045: 
+  completed_at: 
+  name: iTrain - User Migration Script
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: "5"
+  id: "50"
+  description: ""
+  user_id: "2"
+  position: "6"
+  created_at: 2008-05-14 22:45:16
+  state: active
+projects_100: 
+  completed_at: 2008-08-11 20:35:41
+  name: Seer - May Collections
+  updated_at: 2008-08-11 20:35:41
+  default_context_id: 
+  id: "108"
+  description: 
+  user_id: "2"
+  position: "35"
+  created_at: 2008-05-25 13:59:15
+  state: completed
+projects_017: 
+  completed_at: 2008-05-14 22:45:16
+  name: Seer - Hillsborough County Schools
+  updated_at: 2008-08-08 17:03:33
+  default_context_id: 
+  id: "19"
+  description: ""
+  user_id: "2"
+  position: "44"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_073: 
+  completed_at: 
+  name: INSTAAR - Director support
+  updated_at: 2008-05-14 22:45:16
+  default_context_id: 
+  id: "78"
+  description: ""
+  user_id: "3"
+  position: "1"
+  created_at: 2008-05-14 22:45:16
+  state: active
+projects_046: 
+  completed_at: 2008-05-14 22:45:16
+  name: Mofo - Find a new office
+  updated_at: 2008-08-08 17:03:32
+  default_context_id: 
+  id: "51"
+  description: ""
+  user_id: "2"
+  position: "14"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_101: 
+  completed_at: 2008-06-14 04:45:49
+  name: Mofo - Phone Lines
+  updated_at: 2008-08-08 17:03:32
+  default_context_id: 
+  id: "109"
+  description: 
+  user_id: "2"
+  position: "20"
+  created_at: 2008-05-27 23:47:47
+  state: completed
+projects_018: 
+  completed_at: 
+  name: iTrain - Maintenance
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: "5"
+  id: "20"
+  description: ""
+  user_id: "2"
+  position: "3"
+  created_at: 2008-05-14 22:45:16
+  state: active
+projects_074: 
+  completed_at: 
+  name: Little Bird - business development
+  updated_at: 2008-05-14 22:45:16
+  default_context_id: 
+  id: "80"
+  description: ""
+  user_id: "3"
+  position: "5"
+  created_at: 2008-05-14 22:45:16
+  state: active
+projects_130: 
+  completed_at: 2008-08-11 20:23:37
+  name: iTrain - Remove Natalie during Olympics
+  updated_at: 2008-08-11 20:23:37
+  default_context_id: 
+  id: "142"
+  description: ""
+  user_id: "2"
+  position: "11"
+  created_at: 2008-08-08 14:22:26
+  state: completed
+projects_047: 
+  completed_at: 2008-05-14 22:45:16
+  name: iTrain - Sigma Test
+  updated_at: 2008-08-08 17:03:32
+  default_context_id: 
+  id: "52"
+  description: ""
+  user_id: "2"
+  position: "9"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_102: 
+  completed_at: 2008-07-28 17:30:47
+  name: Mofo - Somispo Agreement
+  updated_at: 2008-08-08 17:03:32
+  default_context_id: 
+  id: "110"
+  description: 
+  user_id: "2"
+  position: "22"
+  created_at: 2008-05-29 03:01:56
+  state: completed
+projects_019: 
+  completed_at: 2008-05-14 22:45:16
+  name: Seer - Offsite Backups
+  updated_at: 2008-08-08 17:03:33
+  default_context_id: 
+  id: "21"
+  description: ""
+  user_id: "2"
+  position: "50"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_075: 
+  completed_at: 
+  name: Little Bird - Matt and Mobile Foundry
+  updated_at: 2008-05-14 22:45:16
+  default_context_id: 
+  id: "81"
+  description: ""
+  user_id: "3"
+  position: "6"
+  created_at: 2008-05-14 22:45:16
+  state: active
+projects_131: 
+  completed_at: 2008-08-11 20:21:24
+  name: iTrain - Buy 3 Get 1 Free Promo
+  updated_at: 2008-08-11 20:21:24
+  default_context_id: 
+  id: "143"
+  description: ""
+  user_id: "2"
+  position: "4"
+  created_at: 2008-08-08 14:22:44
+  state: completed
+projects_103: 
+  completed_at: 
+  name: iTrain - Product Index Page
+  updated_at: 2008-06-14 04:43:25
+  default_context_id: 
+  id: "111"
+  description: ""
+  user_id: "2"
+  position: "6"
+  created_at: 2008-06-04 17:04:52
+  state: hidden
+projects_076: 
+  completed_at: 
+  name: INSTAAR - outreach
+  updated_at: 2008-05-14 22:45:16
+  default_context_id: 
+  id: "82"
+  description: ""
+  user_id: "3"
+  position: "3"
+  created_at: 2008-05-14 22:45:16
+  state: active
+projects_048: 
+  completed_at: 2008-05-14 22:45:16
+  name: Seer - Xenia Raise
+  updated_at: 2008-08-08 17:03:33
+  default_context_id: 
+  id: "53"
+  description: ""
+  user_id: "2"
+  position: "62"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_132: 
+  completed_at: 
+  name: Seer - DAXKO User Conference Presentation
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: 
+  id: "144"
+  description: ""
+  user_id: "2"
+  position: "22"
+  created_at: 2008-08-08 14:28:26
+  state: active
+projects_104: 
+  completed_at: 
+  name: iTrain - Promotions Module
+  updated_at: 2008-08-11 20:23:44
+  default_context_id: 
+  id: "112"
+  description: ""
+  user_id: "2"
+  position: "10"
+  created_at: 2008-06-04 17:06:10
+  state: hidden
+projects_077: 
+  completed_at: 
+  name: Seer - YUSA Sales
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: "5"
+  id: "83"
+  description: ""
+  user_id: "2"
+  position: "42"
+  created_at: 2008-05-14 22:45:16
+  state: active
+projects_049: 
+  completed_at: 2008-08-11 20:26:01
+  name: iTrain - Streamline Registration Process
+  updated_at: 2008-08-11 20:26:01
+  default_context_id: 
+  id: "54"
+  description: ""
+  user_id: "2"
+  position: "16"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_133: 
+  completed_at: 
+  name: Seer - Product Development Management Package
+  updated_at: 2008-08-18 02:45:44
+  default_context_id: 
+  id: "145"
+  description: ""
+  user_id: "2"
+  position: "27"
+  created_at: 2008-08-08 14:28:42
+  state: active
+projects_078: 
+  completed_at: 2008-05-14 22:58:44
+  name: Seer - Indianapolis Overlap Estimate
+  updated_at: 2008-08-08 17:03:33
+  default_context_id: 
+  id: "84"
+  description: ""
+  user_id: "2"
+  position: "45"
+  created_at: 2008-05-14 22:45:16
+  state: completed
+projects_105: 
+  completed_at: 
+  name: iTrain - Store data collected in the contact us page the database
+  updated_at: 2008-08-11 20:25:55
+  default_context_id: 
+  id: "113"
+  description: ""
+  user_id: "2"
+  position: "15"
+  created_at: 2008-06-04 17:07:23
+  state: hidden
