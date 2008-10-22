@@ -410,6 +410,7 @@ class TodosController < ApplicationController
   end
   
   def download
+    #download file in local repository
     todo = Todo.find(params[:todo_id] || nil) 
 	existfile = false
 	if todo.assets
@@ -425,6 +426,7 @@ class TodosController < ApplicationController
   end
   
   def download_from_s3
+      #download file asset from amazonaws
       bucket = Bucket.find(AMAZON_BUCKET)
       asset = Asset.find(params[:id])
       bucket.objects.each do |object|
